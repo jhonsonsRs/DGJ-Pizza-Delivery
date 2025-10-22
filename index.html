@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGJ Delivery Pizzaria</title>
+    <link rel="icon" type="image/png" href="logo2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo DGJ Pizzas" class="logo-img">
+            <span class="logo-text">DGJ Pizzaria</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#pedido">Fazer Pedido</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#status">Acompanhar Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="inicio">
+        <div class="overlay">
+            <h1>Bem-vindo à DGJ Delivery!</h1>
+            <p>Saboreie as melhores pizzas e bebidas da cidade com o conforto do delivery.</p>
+            <a href="#cardapio" class="botao">Ver Cardápio</a>
+        </div>
+    </section>
+
+    <section id="cardapio" class="cardapio">
+        <h2>Nosso Cardápio</h2>
+
+        <h3 class="categoria">🍕 Pizzas Salgadas</h3>
+        <div class="menu-grid" id="pizzas-salgadas"></div>
+
+        <h3 class="categoria">🍫 Pizzas Doces</h3>
+        <div class="menu-grid" id="pizzas-doces"></div>
+
+        <h3 class="categoria">🥤 Bebidas</h3>
+        <div class="menu-grid" id="bebidas"></div>
+    </section>
+
+    <section id="pedido" class="pedido">
+        <h2>Finalize seu Pedido</h2>
+        <div id="resumo-pedido">
+            <p>Nenhum item adicionado ainda 🍕</p>
+        </div>
+
+        <form id="pedido-form">
+            <label>Nome:</label>
+            <input type="text" id="nomeCliente" placeholder="Seu nome" required>
+
+            <label>Endereço:</label>
+            <input type="text" id="enderecoCliente" placeholder="Rua, número, bairro" required>
+
+            <label>Telefone:</label>
+            <input type="tel" id="telefoneCliente" placeholder="(XX) XXXXX-XXXX" required>
+
+            <label>Cupom de Desconto (opcional):</label>
+            <input type="text" id="codigoDesconto" placeholder="Ex: PIZZA10">
+            <p id="mensagem-desconto" style="color: green; font-weight: bold;"></p>
+
+            <button type="submit" id="btnFinalizar" disabled>Finalizar Pedido</button>
+        </form>
+    </section>
+
+    <section id="cadastro" class="cadastro">
+        <h2>Cadastro de Cliente</h2>
+        <form>
+            <label>Nome:</label>
+            <input type="text" placeholder="Nome completo" required>
+            <label>Email:</label>
+            <input type="email" placeholder="seuemail@email.com" required>
+            <label>Idade:</label>
+            <input type="number" min="0" required>
+            <label>Telefone:</label>
+            <input type="tel" placeholder="(XX) XXXXX-XXXX" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <section id="status" class="status">
+        <h2>Acompanhar Pedido</h2>
+        <p>Digite seu número de pedido para verificar o status:</p>
+        <form id="statusForm">
+            <input type="text" placeholder="Ex: #10234" required>
+            <button type="submit">Consultar</button>
+        </form>
+        <div class="resultado-status">
+            <p>Status atual: <strong>Em preparo</strong></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 DGJ Delivery Pizzaria — Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
